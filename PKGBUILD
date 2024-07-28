@@ -60,7 +60,7 @@ _url="${url}"
 [[ "${_local}" == true ]] && \
   _url="${_local}"
 source=()
-_branch="main"
+_branch="master"
 [[ "${_git}" == true ]] && \
   makedepends+=(
     git
