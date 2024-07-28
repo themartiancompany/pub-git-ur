@@ -1,0 +1,22 @@
+pkgbase = pub-git
+	pkgdesc = ur publisher
+	pkgver = 0.0.0.1.1.1.1.r18.gfac5075dca616595ca35b9d562a1036a94a9f521
+	pkgrel = 1
+	url = https://github.com/themartiancompany/pub
+	arch = any
+	groups = hip
+	groups = hip-git
+	license = AGPL3
+	checkdepends = shellcheck
+	makedepends = make
+	makedepends = curl
+	makedepends = jq
+	depends = git
+	depends = libcrash-bash
+	optdepends = inteppacman: manage android native applications packages
+	provides = pub=0.0.0.1.1.1.1.r18.gfac5075dca616595ca35b9d562a1036a94a9f521
+	conflicts = pub
+	source = pub.tar.gz::https://github.com/themartiancompany/pub/archive/refs/heads/main.tar.gz
+	sha256sums = SKIP
+
+pkgname = pub-git
