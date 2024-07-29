@@ -8,7 +8,7 @@ _local=false
 _proj="hip"
 _pkgname=pub
 pkgname="${_pkgname}-git"
-pkgver="0.0.0.1.1.1.1".r18.g"fac5075dca616595ca35b9d562a1036a94a9f521"
+pkgver="0.0.0.0.0.0.0.0.0.0.0.0.0.1".r10.g"4f95a5dbc70eecf9ad785ac6f7e73a05f21518a0"
 pkgrel=1
 _pkgdesc=(
   "ur publisher"

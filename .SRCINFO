@@ -1,6 +1,6 @@
 pkgbase = pub-git
 	pkgdesc = ur publisher
-	pkgver = 0.0.0.1.1.1.1.r18.gfac5075dca616595ca35b9d562a1036a94a9f521
+	pkgver = 0.0.0.0.0.0.0.0.0.0.0.0.0.1.r10.g4f95a5dbc70eecf9ad785ac6f7e73a05f21518a0
 	pkgrel = 1
 	url = https://github.com/themartiancompany/pub
 	arch = any
@@ -14,7 +14,7 @@ pkgbase = pub-git
 	depends = git
 	depends = libcrash-bash
 	optdepends = inteppacman: manage android native applications packages
-	provides = pub=0.0.0.1.1.1.1.r18.gfac5075dca616595ca35b9d562a1036a94a9f521
+	provides = pub=0.0.0.0.0.0.0.0.0.0.0.0.0.1.r10.g4f95a5dbc70eecf9ad785ac6f7e73a05f21518a0
 	conflicts = pub
 	source = pub.tar.gz::https://github.com/themartiancompany/pub/archive/refs/heads/master.tar.gz
 	sha256sums = SKIP
