@@ -8,7 +8,7 @@ _local=false
 _proj="hip"
 _pkgname=pub
 pkgname="${_pkgname}-git"
-pkgver="0.0.0.0.0.0.0.0.0.0.0.0.0.1".r10.g"4f95a5dbc70eecf9ad785ac6f7e73a05f21518a0"
+pkgver="0.0.0.0.0.0.0.0.0.0.0.0.0.1".r14.g"64e74bc1ff4eb569acef05453ac3c5c41dc9311c"
 pkgrel=1
 _pkgdesc=(
   "ur publisher"
@@ -38,6 +38,8 @@ checkdepends=(
   shellcheck
 )
 optdepends=(
+  'lur: lur origin support'
+  'fur: fur publishing support'
 )
 _os="$( \
   uname \
@@ -74,7 +76,7 @@ _branch="master"
     jq
   ) && \
   source+=(
-    "${_pkgname}.tar.gz::${_url}/archive/refs/heads/${_branch}.tar.gz"
+    "${_pkgname}-${_branch}.tar.gz::${_url}/archive/refs/heads/${_branch}.tar.gz"
   )
 sha256sums=(
   SKIP
