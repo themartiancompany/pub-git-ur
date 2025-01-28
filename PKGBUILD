@@ -1,11 +1,31 @@
 # SPDX-License-Identifier: AGPL-3.0
+
+#    ----------------------------------------------------------------------
+#    Copyright © 2024, 2025  Pellegrino Prevete
 #
+#    All rights reserved
+#    ----------------------------------------------------------------------
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 # Maintainer:  Truocolo <truocolo@aol.com>
 # Maintainer:  Pellegrino Prevete <pellegrinoprevete@gmail.com>
 
-_git=false
-_local=false
-_proj="hip"
+_git="false"
+_local="false"
+_proj=hip
+_py="python"
 _pkgname=pub
 pkgname="${_pkgname}-git"
 pkgver="0.0.0.0.0.0.0.0.0.0.0.0.0.1".r14.g"64e74bc1ff4eb569acef05453ac3c5c41dc9311c"
@@ -28,14 +48,21 @@ license=(
   AGPL3
 )
 depends=(
-  git
-  libcrash-bash
+  'git'
+  'evm-gpg'
+  'findutils'
+  'gpg-key-info'
+  'lur'
+  'libcrash-bash'
+  'rsync'
+  'ur'
 )
 makedepends=(
-  make
+  'make'
+  "${_py}-docutils"
 )
 checkdepends=(
-  shellcheck
+  'shellcheck'
 )
 optdepends=(
   'lur: lur origin support'
@@ -188,6 +215,10 @@ package() {
     DESTDIR="${pkgdir}" \
     PREFIX="/usr" \
     install
+  install \
+    -Dm644 \
+    "COPYING" \
+    "${pkgdir}/usr/share/licenses/${pkgname}/COPYING"
 }
 
 # vim: ft=sh syn=sh et
